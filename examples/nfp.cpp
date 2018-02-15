@@ -1,4 +1,5 @@
-//#define LIBNFP_USE_RATIONAL
+//uncomment next line to use infinite precision (slow)
+#define LIBNFP_USE_RATIONAL
 #include "../src/libnfp.hpp"
 
 int main(int argc, char** argv) {
