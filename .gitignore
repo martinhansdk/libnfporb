@@ -17,4 +17,5 @@ test.log
 examples/isvalid
 testgen.log
 testgenfuzz.log
-
+build
+*~

@@ -53,12 +53,20 @@ Note that is wasn't completely possible to implement it as suggested in the pape
 By default the library is using floating point as coordinate type but by defining the flag "LIBNFP_USE_RATIONAL" the library can be instructed to use infinite precision.
 
 ## Build
-The library has two dependencies: [Boost Geometry](http://www.boost.org/doc/libs/1_65_1/libs/geometry/doc/html/index.html) and [libgmp](https://gmplib.org). You need to install those first before building. Note that building is only required for the examples. The library itself is header-only.
+The library has the following dependencies:
+  * [Boost Geometry](http://www.boost.org/doc/libs/1_65_1/libs/geometry/doc/html/index.html)
+  * [libgmp](https://gmplib.org) - only needed if you want to use the infinite precision feature.
+  * [Boost Filesystem](https://www.boost.org/doc/libs/1_65_1/libs/filesystem/doc/index.htm) - only needed for tests.
+
+You need to install these first before building. Note that building is only required for the examples and tests. The library itself is header-only.
 
     git clone https://github.com/kallaballa/libnfp.git
     cd libnfp
-    make
-    sudo make install
+    mkdir build
+    cd build
+    cmake -D CMAKE_BUILD_TYPE=Release -D BOOST_ROOT=/path/to/boost/ ..
+    make 
+    test/unittests
 
 ## Code Example
 
