@@ -54,7 +54,7 @@ By default the library is using floating point as coordinate type but by definin
 
 ## Build
 The library has the following dependencies:
-  * [Boost Geometry](http://www.boost.org/doc/libs/1_65_1/libs/geometry/doc/html/index.html)
+  * [Boost Geometry](http://www.boost.org/doc/libs/1_65_1/libs/geometry/doc/html/index.html) - version 1.65.1 is known to work, please avoid versions 1.66.0 and 1.67.0 as they are not compatible with libnfporb
   * [libgmp](https://gmplib.org) - only needed if you want to use the infinite precision feature.
   * [Boost Filesystem](https://www.boost.org/doc/libs/1_65_1/libs/filesystem/doc/index.htm) - only needed for tests.
 

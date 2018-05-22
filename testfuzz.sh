@@ -1,8 +1,9 @@
+#!/bin/bash
 truncate --size 0 testfuzz.log
 
 ls -d data/handcrafted/* | while read line; do
   echo -n "#### Running case $line: "
-  examples/fuzz $line/A.wkt $line/B.wkt &>> testfuzz.log
+  build/examples/fuzz $line/A.wkt $line/B.wkt &>> testfuzz.log
   if [ $? -eq 0 ]; then
     echo Success
   else
